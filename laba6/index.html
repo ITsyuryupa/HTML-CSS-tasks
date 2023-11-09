@@ -8,13 +8,8 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href='https://fonts.googleapis.com/css?family=Tenor Sans' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
-    
 </head>
 <body>
-    <script src="js/functions.js"></script>
-    <script>
-        alert(checkPalindrom('ИскАть таКси'));
-    </script>
     <header>
         <nav class="headerContainer">
             <ul class="ulContainer">
@@ -100,7 +95,9 @@
                     <h3 class="">Саргылана и Никита Колодезниковы-<br>Матчитовы</h3>
                     <p class="">Саргылана - реставратор-декоратор, преображает и дарит <br> вторую жизнь старой мебели.
                         <br><br>Никита - мастер по дереву, вся мебель делает его <br> умелыми руками.</p>
-                    <button class="buttonStyle1 " >Подробнее о нас</button>
+                        <form action="about.html" target="_blank">
+                            <button class="buttonStyle1 ">Подробнее о нас</button>
+                        </form>
                 </div>
             </div>
         </section>
@@ -119,7 +116,7 @@
                         эксклюзивность наших изделий.<br>
                         Возможность создания своего неповторимого стиля,<br>
                         уникальность и неповторимость каждого изделия.</p>
-                    <button class="buttonStyle1">Закать мебель</button>  
+                    <button class="buttonStyle1" id="modalOpen">Закать мебель</button>  
                 </div>
             </div>
             <div class="fifthContainerGrid fifthContainerGridBackgroundV2">
@@ -132,7 +129,7 @@
                         Что делать, если память о предках хочется сохранить, но к вашему интерьеру старая и испорченная мебель не подходит? 
                         Правильно, отреставрировать его и наслаждаться не только обновлённым видом мебели, но и с теплотой помнить, что эта мебель была сделана талантливыми предками.            
                     </p>
-                    <button class="buttonStyle1">Купить мастер-класс</button>
+                    <button class="buttonStyle1" id="modalOpenMaster">Купить мастер-класс</button>
                 </div>
             </div>
         </section>
@@ -151,8 +148,27 @@
                 </diV>
             </div>
         </section>
+        <section>
+            <div class="modalContainer" id="buyModal">
+                <div class="modalContent">
+                    <button class="closeModal" id="closeModalBtn">X</button>
+                    <form id="Checker">
+                        <h2>Отправьте нам заказ</h2>
+                        <p>Введите ваше имя</p>
+                        <diV class="inputBox">
+                            <input data-name="1" class="inputField"/>
+                        </diV>
+                        <p>Введите ваш номер</p>
+                        <div class="inputBox">
+                            <input data-phone="11" class="inputField"/>
+                        </div>
+                        <button type="submit">Отправить заказ</button>
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
-    <footer>
+    <footer>я
         <div class="footerContainer">
             <div class="footerElements">
                     <p> ИП Колодезников-Матчитов Н.И.<br>
@@ -181,6 +197,7 @@
             </div>
       </div>
     </footer>
+    <script src="./script.js"></script>
 </body>
 
 </html>
