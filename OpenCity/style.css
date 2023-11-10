@@ -1,12 +1,13 @@
 
 
 html, body{
-    background-color: #CDF5FD;
     margin: 0px;
     padding: 0px;
     height: 100%;
     width: 100%;
+    min-height: 100%
 }
+
 
 .header{
     background-color: #CDF5FD;
@@ -21,23 +22,153 @@ html, body{
     list-style-type: none;
 }
 
-.headerUserContainer li{
-    list-style-type: none;
+.header .container{
+    justify-items: center;
+
 }
 
-.eventUserContainer{
+header .button {
+    background-color: #146C94; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.event .button {
+    background-color: #146C94; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    min-width: 40px;
+}
+/*main--------------------------------------------------------*/
+
+main{
+    height: 74%;
+}
+.eventListUserContainer{
     background-color: #AFD3E2;
-    grid-template-columns: 1fr, 1fr, 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr, 1fr, 1fr;
     width: 100%;
     display: grid;
-    height: 30em;
+    height: 100%;
     align-items: center;
     justify-items: center;
+    overflow: scroll;
 }
 
-.eventUserContainer ul{
+.eventListUserContainer ul{
     list-style-type: none;
 }
+
+.eventListUserContainer .event{
+    margin-top: 40px;
+    display: grid;
+    width: 70%;
+    height: 250PX;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    /*border: 1px solid black;*/
+}
+
+.eventListAdminContainer{
+    background-color: #AFD3E2;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr, 1fr, 1fr;
+    width: 100%;
+    display: grid;
+    height: 100%;
+    align-items: center;
+    justify-items: center;
+    overflow: scroll;
+}
+
+.eventListAdminContainer ul{
+    list-style-type: none;
+}
+
+.eventListAdminContainer .event{
+    margin-top: 40px;
+    display: grid;
+    width: 70%;
+    height: 250PX;
+    grid-template-columns: 4fr 4fr 4fr 1fr;
+    grid-template-rows: 1fr;
+    /*border: 1px solid black;*/
+}
+
+.event div{
+    border: 1px solid black;
+    max-height: 250px;
+    
+}
+
+.event img{
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+}
+
+.event p{
+    margin: 5px;
+    max-height: 80%;
+    overflow: scroll;
+}
+
+.decriptionContainer{
+    padding: 0px;
+}
+
+/*модальное окно*/
+.modalContainer{
+    display: flex;
+    position: fixed;
+    left:0;
+    top:0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9;
+    background-color: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+}
+.modalContent{
+    display: grid;
+    position: relative;
+    max-width: 450px;
+    padding: 30px 20px;
+    z-index: 1;
+    background-color: white;
+    border-radius: 5%;
+    box-shadow: 0px 0px 29px 10px rgba(0, 0, 0, 0.2);
+}
+
+.modalContainer.open{
+    visibility: visible;
+    opacity: 1;
+}
+.closeModal{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    border: none;
+    background-color: transparent;
+    padding: 5px;
+    cursor: pointer;
+    color: gray;
+}
+
+/*footer--------------------------------------------------------*/
 
 .footer .container {
     background-color: #19A7CE;
