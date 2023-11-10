@@ -1,6 +1,7 @@
 const fullPhoto = document.querySelector('.thirdOrderContainerImgTop');
 const thumbnails = document.querySelectorAll('.thirdOrderContainerImgDown');
 
+//слушатель для каждой картинки
 for(let i = 0; i < thumbnails.length; i++){
     thumbnails[i].addEventListener('click', function(){
         fullPhoto.src = thumbnails[i].src;
@@ -72,7 +73,7 @@ function validation(form){
         if (input.dataset.phone){
             if (input.value.length != input.dataset.phone){
                 removeError(input);
-                createError(input, `Длина номера должна равеняться 11`)
+                createError(input, `Длина номера должна равняться 11`)
                 result = false;
             }
             if (isDigit(input.value)==false){
@@ -84,7 +85,7 @@ function validation(form){
         if (input.dataset.name){
             if (input.value.length <1){
                 removeError(input);
-                createError(input, `Длина имени должна быть больше 1`)
+                createError(input, `Длина имени > 1`)
                 result = false;
             }
             if (isAlpha(input.value)==false){
@@ -98,7 +99,7 @@ function validation(form){
 }
 
 document.getElementById('Checker').addEventListener('submit', function(e){
-    e.preventDefault();
+    e.preventDefault();//убрать дефолтные состояния
     if (validation(this) == true){
         alert('Форма было успешно проверена!');
     }

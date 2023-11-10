@@ -1,6 +1,4 @@
-* {
-    box-sizing: border-box;
-}
+
 
 html, body{
     background-color: #CDF5FD;
@@ -42,14 +40,26 @@ html, body{
 }
 
 .footer .container {
-    padding-top: 50px;
     background-color: #19A7CE;
     list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px;
+    align-items: center;
 }
 
-.footer .container ul{
+.footer .container .wrapper{
     margin: 0px;
     padding: 0px;
     list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
+.footer .container .wrapper a{
+    text-decoration: none;
+    color: black;
+}
+
 
