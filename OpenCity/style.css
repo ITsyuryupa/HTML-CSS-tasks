@@ -5,7 +5,8 @@ html, body{
     padding: 0px;
     height: 100%;
     width: 100%;
-    min-height: 100%
+    min-height: 100%;
+
 }
 
 
@@ -62,6 +63,7 @@ main{
     align-items: center;
     justify-items: center;
     overflow: scroll;
+    overflow-x: hidden;
 }
 
 .eventListUserContainer ul{
@@ -117,10 +119,16 @@ main{
     height: 100%;
 }
 
-.event p{
+.event .longText{
     margin: 5px;
     max-height: 80%;
     overflow: scroll;
+    overflow-x: hidden;
+}
+
+.event p{
+    margin: 5px;
+    max-height: 80%;
 }
 
 .decriptionContainer{
