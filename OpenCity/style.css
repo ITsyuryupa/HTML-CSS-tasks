@@ -6,30 +6,60 @@ html, body{
     height: 100%;
     width: 100%;
     min-height: 100%;
-
+    background-color: rgb(26,28,40);
 }
+p{
+    color: aliceblue;
+    margin: 0px;
+}
+.page{
 
-
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+main{
+    min-height: 100%;
+}
 .header{
-    background-color: #CDF5FD;
+    background-color: rgb(17,19,30);
     width: 100%;
-    display: grid;
-    height: 140px;
+    display: flex;
+    min-height: 100px;
     align-items: center;
-    justify-items: center;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
 }
 
-.header .ul{
-    list-style-type: none;
+.logo {
+    display: flex;
+    align-items: center;
+    margin-left: 100px;
 }
 
-.header .container{
-    justify-items: center;
+.logo  span{
+    color: aliceblue;
+}
 
+.logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+
+
+
+.admin-link {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    margin-right: 100px;
 }
 
 header .button {
-    background-color: #146C94; /* Green */
+    background-color: #146C94;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -37,9 +67,10 @@ header .button {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    border-radius: 10px;
 }
 .event .button {
-    background-color: #146C94; /* Green */
+    background-color: #146C94; 
     border: none;
     color: white;
     text-align: center;
@@ -47,93 +78,67 @@ header .button {
     display: inline-block;
     font-size: 16px;
     min-width: 40px;
+    height: 100%;
+    width: 100%;
 }
 /*main--------------------------------------------------------*/
-
-main{
-    height: 74%;
+.event-list-con{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
-.eventListUserContainer{
-    background-color: #AFD3E2;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr, 1fr, 1fr;
-    width: 100%;
-    display: grid;
-    height: 100%;
-    align-items: center;
-    justify-items: center;
-    overflow: scroll;
-    overflow-x: hidden;
-}
-
-.eventListUserContainer ul{
-    list-style-type: none;
+.event-card {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    max-width: 1000px;
+    height: 300px;
+    margin: 10px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: rgb(43,45,61);
+    cursor: pointer;
+    /*box-shadow: 0px 2px 5px 1px rgba(43,45,61,1);*/
 }
 
-.eventListUserContainer .event{
-    margin-top: 40px;
-    display: grid;
-    width: 70%;
-    height: 250PX;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    /*border: 1px solid black;*/
+.event-card img {
+    object-fit: cover;
+    width: 300px;
+    height: 300px;
+    /*border-right: 1px solid rgb(43,45,61);*/
 }
 
-.eventListAdminContainer{
-    background-color: #AFD3E2;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr, 1fr, 1fr;
-    width: 100%;
-    display: grid;
-    height: 100%;
-    align-items: center;
-    justify-items: center;
-    overflow: scroll;
+.event-details {
+    margin: 20px;
+    height: auto;
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
 }
 
-.eventListAdminContainer ul{
-    list-style-type: none;
+.event-title {
+    color: rgba(255 255 255);
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
-.eventListAdminContainer .event{
-    margin-top: 40px;
-    display: grid;
-    width: 70%;
-    height: 250PX;
-    grid-template-columns: 4fr 4fr 4fr 1fr;
-    grid-template-rows: 1fr;
-    /*border: 1px solid black;*/
+.event-meta {
+    color: #777;
+    margin-bottom: 10px;
 }
 
-.event div{
-    border: 1px solid black;
-    max-height: 250px;
-    
-}
-
-.event img{
-    max-width: 100%;
-    max-height: 100%;
-    width: 100%;
+.event-description {
+    line-height: 1.6;
+    overflow: hidden;
     height: 100%;
 }
 
-.event .longText{
-    margin: 5px;
-    max-height: 80%;
-    overflow: scroll;
-    overflow-x: hidden;
+.event-place {
+    color: #777;
+    margin-bottom: 10px;
 }
 
-.event p{
-    margin: 5px;
-    max-height: 80%;
-}
-
-.decriptionContainer{
-    padding: 0px;
-}
 
 /*модальное окно*/
 .modalContainer{
@@ -177,28 +182,67 @@ main{
 }
 
 /*footer--------------------------------------------------------*/
-
-.footer .container {
-    background-color: #19A7CE;
-    list-style-type: none;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 100px;
-    align-items: center;
+footer .logo{
+    margin-left: 0;
 }
-
-.footer .container .wrapper{
-    margin: 0px;
-    padding: 0px;
-    list-style-type: none;
+.logo-con{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin: auto 100px;
+}
+.footer{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-between;
+    z-index: 99;
+    width: 100%;
+    height: 200px;
+    margin-top: auto;
+    background-color: rgb(17,19,30);
 }
-.footer .container .wrapper a{
-    text-decoration: none;
-    color: black;
+.info-con{
+    display: flex;
+    flex-direction: row;
+    float: right;
+    margin: 48px 100px;
+    gap: 20px;
+    font-size: 16px;
 }
+.info-con a{
+    color: rgb(108, 109, 116);;
+}
+
+/*Other ---------------------------------*/
+/* Для полосы прокрутки */
+::-webkit-scrollbar {
+    width: 8px; /* Ширина полосы прокрутки */
+
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: rgb(17,19,30); /* Цвет фона полосы прокрутки */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: rgb(43,45,61); /* Цвет полосы прокрутки */
+    border-radius: 4px; /* Скругление углов полосы прокрутки */
+  }
+  
+  /* Для полосы прокрутки при наведении курсора */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(53, 53, 64);
+  }
+  
+  /* Для полосы прокрутки при активации (нажатии) */
+  ::-webkit-scrollbar-thumb:active {
+    background-color: rgb(31, 31, 56);
+  }
+  
+
+
+
+
+
 
 
