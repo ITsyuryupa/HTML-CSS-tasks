@@ -1,0 +1,36 @@
+.addTaskCon{
+    border: none;
+    border-radius: 15px;
+    padding: 30px 20px;
+    width: 450px;
+    height: auto;
+    background: #ffffff;
+}
+.addTaskCon h2{
+    font-size: 24px;
+    margin-bottom: 20px;
+
+}
+
+.addTaskInput{
+    width: 250px;
+    height: 45px;
+    border-radius: 15px;
+    border: 1px solid gray;
+    padding: 0 20px;
+    font-size: 20px;
+}
+.addTaskInput::placeholder{
+    opacity: 0.75;
+    font-size: 16px;
+}
+.addTaskButton{
+    width: 150px;
+    height: 45px;
+    background: #2f80ed;
+    border-radius: 10px;
+    border: none;
+    color: #ffffff;
+    font-size: 20px;
+    cursor: pointer;
+}

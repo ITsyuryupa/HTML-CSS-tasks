@@ -1,0 +1,15 @@
+.clearButton{
+    margin: 20px 0 0 0;
+    background: #c9666c;
+    color: #fff;
+    width: auto;
+    height: 45px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.clearButton:disabled{
+    background: gray;
+    cursor: not-allowed;
+}
